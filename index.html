@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دکتر ساناز عمادی</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./node_modules/libj-iransans/index.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://kit.fontawesome.com/e7b96a4d31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="container-fluid">
+      <a href="#"><img src="./assets/img/logo.png" alt="logo" id="logo-brand" /></a>
+      <h2>دکتر ساناز عمادی</h2>
+      <div class="nav-icons">
+        <ul>
+          <li class="nav-icons-list-item" id="navbar-search">
+            <!-- Button trigger modal -->
+            <a href="#" type="button" class="btn openBtn" data-toggle="modal" data-target="#exampleModal"
+              onclick="openSearch()"><img src="./assets/img/search-icon.png" class="caret" alt="search" />
+            </a>
+
+            <!-- Modal -->
+            <div id="myOverlay" class="overlay ">
+              <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+              <div class="overlay-content">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </li>
+          <li class="sub-menu-parent nav-icons-list-item" tab-index="0">
+            <a href="#"><img src="./assets/img/menu-icon.png" class="caret" alt="menu" id="burger-menu" /></a>
+            <ul class="sub-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 header-container"></div>
+        <div class="col-12 col-lg-5 overlay-container">
+          <!-- <div class="overlay-header"> -->
+          <h4>دکتر ساناز عمادی</h4>
+          <p>
+            طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن
+            صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
+            می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و
+            ظاهر متن باشد.
+          </p>
+          <a href="#">بیشتر بدانید</a>
+          <div class="sign-header">
+
+            <img src="./assets/img/sign.jpg" alt="signature" />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- Posts Section -->
+  <section class="posts">
+    <div class="container ">
+      <ul class="row w-100 m-0">
+        <li class="col-12 col-sm-6 col-lg-3">
+          <div class="post-container">
+            <div class="post-img-container">
+              <div class="post-img">
+                <img src="./assets/img/post4.jpg" alt="post-image">
+
+              </div>
+            </div>
+            <div class="post-tag">
+              <span>99/5/22</span>
+              <span>
+                <span>تغذیه</span>
+              </span>
+            </div>
+            <div class="post-comment">
+              <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <div class="post-continer">
+            <div class="post-img">
+              <img src="./assets/img/post3.jpg" alt="post-image">
+              <div class="posts-overlay">
+                <a href="#">
+                  <img src="./assets/img/play-icon.png" alt="play icon">
+                </a>
+              </div>
+            </div>
+            <div class="post-tag">
+              <span>99/5/22</span>
+              <span>
+                <span>مکمل درمان</span>
+              </span>
+            </div>
+            <div class="post-comment">
+              <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <div class="post-continer">
+            <div class="post-img">
+              <img src="./assets/img/post2.jpg" alt="post-image">
+
+            </div>
+            <div class="post-tag">
+              <span>99/5/22</span>
+              <span>
+                <span>مو</span>
+              </span>
+            </div>
+            <div class="post-comment">
+              <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+            </div>
+          </div>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <div class="post-continer">
+            <div class="post-img">
+              <img src="./assets/img/post1.jpg" alt="post-image">
+              <div class="posts-overlay">
+                <a href="#">
+                  <img src="./assets/img/play-icon.png" alt="play icon">
+                </a>
+              </div>
+            </div>
+            <div class="post-tag">
+              <span>99/5/22</span>
+              <span>
+                <span>پوست</span>
+              </span>
+            </div>
+            <div class="post-comment">
+              <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Posts Section -->
+  <!-- Secret Section -->
+  <section id="secret-section">
+    <div class="container">
+      <div class="row w-100-m-0">
+        <div class="col-12 col-lg-6 p-0">
+          <img src="./assets/img/secret.jpg" alt="secret image" id="secret-image">
+        </div>
+        <div class="col-12 col-lg-6" id="secret-context">
+          <h3>راز‌هایی که متخصصین پوست به شما نمی‌گویند.</h3>
+          <p>در مبحث مراقبت از پوست رازهایی برای جوان ماندن تان وجود دارد که هیچ متخصص پوستی آن را به شما نمی گویند. در
+            این مقاله این رازها را به شما می گوییم.</p>
+          <p>هر چقدر هم به متخصص پوست مراجعه کنید، باز هم نکاتی کلیدی برای جوان ماندن وجود دارد که از زبان آنها نمی
+            شنوید. این ها مواردی وابسته به سبک زندگی شما هستند که در جوان به نظر رسیدن تان تاثیر به سزایی دارند.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of Secret Section -->
+  <!-- Suggest Section -->
+  <section id="offer">
+
+    <div class="container">
+
+      <h3>مطالب پیشنهادی</h3>
+
+      <div class="row w-100 p-0 m-0">
+
+        <div class="col-12 col-lg-6 offer-post-row">
+
+          <div class="row w-100 p-0">
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fp2.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fs3.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fs4.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/f2post.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/post4.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fp2.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fs4.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+            <div class="col-6 offer-post">
+
+              <div class="offer-post-img">
+                <div class="offer-img-container">
+                  <img src="./assets/img/fs3.jpg" alt="post-image">
+                </div>
+              </div>
+
+              <div class="offer-post-tag">
+                <span>99/5/22</span>
+                <span>
+                  <span>تغذیه</span>
+                </span>
+              </div>
+
+              <div class="offer-post-comment">
+                <p>زیبایی پوست صورت با 3 اصل جادویی تمیزی، تقویت و تغذیه</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="col-12 col-lg-6" id="sticky-offer">
+          <img src="./assets/img/offerPost.jpg" alt="offer post">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- end of Suggest Section -->
+  <!-- Category Section -->
+  <section id="category">
+    <div class="container">
+      <h3>دسته بندی</h3>
+      <div class="row w-100 p-0 m-0">
+
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/gym.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>ورزش<span>30</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/post.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>پوست<span>12</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/post3.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>مکمل و درمانی<span>8</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/post2.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>مو<span>25</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/lifestyle.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>سبک زندگی<span>10</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="category-item-container">
+            <img src="./assets/img/post4.jpg" alt="category image">
+            <div class="category-img-context">
+              <span>تغذیه<span>15</span></span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of Category Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-email">
+
+        <div class="row w100 p-0 m-0">
+
+          <div class="col-12 col-lg-6 footer-email-img p-0">
+            <img src="./assets/img/email-section.jpg" alt="contact image">
+          </div>
+
+          <div class="col-12 col-lg-6 bg-light card p-0">
+            <div class="card-body">
+              <h3 class="card-title">با ما همراه باشید</h3>
+              <div class="card-input-container row w-100 ">
+                <div class="col-9 p-0">
+
+                  <input type="text" class="p-4" placeholder=" ایمیل خود را وارد کنید...">
+                </div>
+                <div class="col-3 p-0">
+
+                  <button class="btn">ارسال</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    function openSearch() {
+      document.getElementById("myOverlay").style.transitionDelay = " 0s, 0s, 2s "
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function closeSearch() {
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

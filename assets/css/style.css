@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: IRANSansMedium;
+  list-style: none;
+}
+
+body {
+  background-color: #f5f2f1;
+  position: relative;
+}
+
+/* navbar */
+
+nav {
+  box-shadow: 0 0 3px 1px rgba(65, 40, 40, 0.05);
+  background-color: rgba(245, 242, 241,0.95);
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+nav .container-fluid {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container-fluid #logo-brand {
+  width: 50px;
+  height: auto;
+}
+nav .container-fluid h2 {
+  font-size: 20px;
+  margin: 8px 0;
+}
+nav .container-flui .nav-icons {
+  width: 60px;
+  margin-left:10px;
+}
+nav .container-fluid .nav-icons > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+}
+nav .container-fluid .nav-icons > ul li.nav-icons-list-item {
+  direction: rtl;
+  margin: 0 5px;
+}
+nav .container-fluid .nav-icons .caret {
+  width: 25px;
+  height: auto;
+}
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
+}
+#navbar-search:focus #myOverlay{
+  transition-delay: 0s, 0s, 2s;
+}
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+.sub-menu-parent { 
+  position: relative; 
+}
+
+.sub-menu { 
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  direction:ltr;
+  top: 100%;
+  min-width: 250px;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  background-color: rgba(255, 255, 255 ,0.9);
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.5);
+}
+.sub-menu li {
+    margin: 30px 60px;
+}
+.sub-menu li a::after {
+  width: 50px;
+  margin: auto;
+  content: " ";
+  border-top: solid 1px black;
+}
+.sub-menu li a{
+  color: black;
+
+  
+}
+.sub-menu-parent a img{
+
+}
+.sub-menu-parent a:focus img,
+.sub-menu-parent a:focus-within img{
+  transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out 0.1s ;
+}
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:focus-within .sub-menu {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+/* header */
+header {
+  /* max-height: 100vh; */
+  width: 100%;
+  padding: 10px;
+}
+header .container .row {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+header .container .row .header-container {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/header1.jpg");
+  background-size: cover;
+  background-position: top;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 4px 1px rgba(128, 128, 128, 0.3);
+  border-radius: 20px;
+}
+header .container .row .overlay-container {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 40px 40px 0 40px;
+  text-align: right;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.5);
+}
+header .container .row p {
+  font-size: 0.75rem;
+  margin: 30px 0;
+}
+header .container .row .sign-header {
+  width: 100%;
+  direction: ltr;
+}
+header .container .row .sign-header img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+/* end of header */
+/* section posts */
+section.posts {
+  width: 100%;
+  margin-top: 60px;
+}
+section.posts ul {
+  width: 100%;
+}
+section.posts ul li {
+  height: auto;
+  padding: 20px 10px;
+  text-align: right;
+}
+.post-container {
+  position: relative;
+}
+.post-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+}
+section.posts ul li .post-img .posts-overlay {
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+section.posts ul li .post-img > img {
+  height: 185px;
+  width: 100%;
+  object-fit: cover;
+}
+section.posts ul li:nth-child(odd) .post-img > img {
+  height: 285px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+ .post-tag {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: gray;
+  font-size: 13px;
+}
+ .post-tag > span:last-child {
+  border-top: solid 0.5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 30px;
+  top: 9px;
+}
+ .post-tag span span {
+  margin: auto;
+  background-color: #f5f2f1;
+  position: absolute;
+  width: 100px;
+  right: 40px;
+  top: -10px;
+}
+/* end of section posts */
+/* Secret Section */
+section#secret-section {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+section#secret-section .container .row #secret-image {
+  width: 100%;
+  padding: 0;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+}
+section#secret-section .container .row #secret-context {
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+  padding: 30px 50px;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section#secret-section .container .row #secret-context h3 {
+  line-height: 40px;
+}
+section#secret-section .container .row #secret-context p {
+  font-size: 14px;
+  font-weight: bold;
+}
+section#secret-section .container .row #secret-context p:last-child {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* end of Secret Section */
+
+/* offer section */
+section#offer {
+  width: 100%;
+  text-align: right;
+  /* padding: 50px 0; */
+  height: auto;
+}
+section#offer h3{
+  margin-bottom: 30px;
+}
+
+section#offer .container .offer-post-row{
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+section#offer .container .offer-post {
+  width:auto;
+  max-height: 400px;
+  margin-bottom: 20px;
+}
+section#offer .container .offer-post  .offer-post-tag{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: gray;
+  font-size: 13px;
+}
+section#offer .container .offer-post  .offer-post-tag > span:last-child {
+  border-top: solid 0.5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 30px;
+  top: 9px;
+}
+section#offer .container .offer-post  .offer-post-tag span span {
+  margin: auto;
+  background-color: #f5f2f1;
+  position: absolute;
+  right: 40px;
+  top: -10px;
+}
+section#offer .container .offer-post .offer-post-img{
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 280px;
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+}
+section#offer .container .offer-post .offer-post-img .offer-img-container img{
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+section#offer .container .offer-post .offer-post-comment{
+font-size: 0.80rem;
+}
+
+section#offer #sticky-offer{
+  /* padding-right: 0; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section#offer #sticky-offer img{
+  border-radius: 20px;
+  overflow: hidden;
+  height: 81vh;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 35px;
+  position: sticky;
+  top: 118px;
+  /* margin-top: 40px; */
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+  object-fit: cover;
+}
+/* end of offer section */
+/* Category Section */
+section#category {
+  margin: 50px 0;
+  text-align: right;
+}
+section#category .container h3{
+  margin-bottom: 30px;
+}
+
+section#category .container .row > div{
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 10px !important;
+}
+section#category .container .row .category-item-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  background-color: rgba(255, 255, 255,1);
+  border-radius: 20px;
+  padding-bottom:5px ;
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5);
+}
+section#category .container .row .category-item-container img{
+  overflow: hidden;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 150px;
+  /* box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.5); */
+}
+section#category .category-item-container .category-img-context{
+  margin: 15px 15px 5px 0;
+  height: auto;
+}
+section#category .category-item-container .category-img-context span:first-child{
+  position: relative;
+  width: auto;
+  margin-right: 5px;
+}
+section#category .category-item-container .category-img-context span span{
+  top: -10px;
+  font-size: 12px;
+  right: 3px;
+  position: absolute;
+  color: gray;
+}
+
+/* end of Category Section */
+/* footer section */
+footer{
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer .container .footer-email {
+height: 50%;
+ 
+}
+footer .container .footer-email > .row{
+  height: auto;
+  width: 100%;
+}
+footer .container .footer-email .footer-email-img{
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.2);
+}
+footer .container .footer-email .footer-email-img img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+footer .container .footer-email .card{
+  padding: 10px 30px !important;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.2);
+  width: 100%;
+  direction: rtl;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px; 
+  text-align: right;
+}
+footer .container .footer-email .card .card-body h3{
+font-size: 20px;
+font-weight: 700;
+}
+footer .container .footer-email .card .card-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+footer .container .footer-email .card .card-input-container div.col-9 input{
+  border: solid 1px rgba(0, 0, 0,0.2);
+  font-size: 13px;
+  height: 50px;
+  width: 100%;
+}
+footer .container .footer-email .card .card-input-container div.col-3{
+  height: 50px;
+  border-top: solid 1px rgba(0, 0, 0,0.2);
+  border-left: solid 1px rgba(0, 0, 0,0.2);
+  border-bottom: solid 1px rgba(0, 0, 0,0.2);
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+/* end of footer section */
+
+
+@media only screen and (max-width: 991px) {
+  header .container .row .header-container {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 8px;
+  }
+  header .container .row .overlay-container {
+    position: static;
+  }
+  section.posts ul li .post-img > img {
+    height: 250px !important;
+  }
+  section#secret-section {
+    margin-bottom: 60px;
+  }
+  
+  section#secret-section .container .row {
+    padding: 0 15px;
+  }
+  section#secret-section .container .row .col-12 {
+    height: 100%;
+    object-fit: cover;
+  }
+  section#secret-section .container .row #secret-image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+  section#secret-section .container .row #secret-context {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 0;
+  }
+  section#offer h3{
+  /* margin: 50px; */
+}
+section#offer #sticky-offer img{
+  height: 70vh;
+}
+footer .container .footer-email .footer-email-img{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+footer .container .footer-email .card{
+  border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+     border-top-right-radius: 0;
+}
+}
+@media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 990px) {
+    section#secret-section .container .row #secret-context > * {
+      padding: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  section#secret-section .container .row #secret-context {
+    padding: 20px 20px;
+  }
+  section#secret-section .container .row #secret-context > * {
+    padding-bottom: 15px;
+  }
+}
